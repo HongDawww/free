@@ -1,3 +1,49 @@
-.pw {
-	border: 1px solid blue;
+.main {
+	border: 1px solid #AACDFF;
+	border-radius: 20px;
+	width: 670px;
+	height: 960px;
+	margin: 0 auto;
+	box-shadow: 2px 2px 5px 2px rgba(18, 0, 215,0.3);
 }
+.main-body {
+	width: 470px;
+	height: 818px;
+	margin: 61px;
+}
+.main-body h1 {
+	font-size: 32px;
+	color: #0068FF;
+}
+.main-body span{
+ color: #797979;
+}
+.main-body > input {
+	all:unset;
+	border-bottom: 1px solid #a3a3a3;
+	width: 466px;
+}
+.main-body > input:focus{
+	border-bottom: 1px solid #0068FF;
+}
+.chk {
+	text-align: center;
+}
+.footer {
+	text-align: center;
+}
+.footer > span {
+	font-size: 13px;
+	color: black;
+}
+button {
+	width: 470px;
+	height: 75px;
+	font-size: 18px;
+	border-radius: 10px;
+	border: 1px solid #0068ff;
+	background-color: white;
+	margin: 20px;
+	color: #0068FF;
+}
+
