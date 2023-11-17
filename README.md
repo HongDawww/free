@@ -13,10 +13,12 @@
 </div>
 
 # Figma Design
-- index.html
+- index
 ![index](https://github.com/HongDawww/free/assets/142575028/87abb4a8-4a9e-4861-93c4-7a34f3c4019a)
-- index.html , home.html
+- home
 ![index + home](https://github.com/HongDawww/free/assets/142575028/d0a9ead2-d2f2-45a6-9d9d-02bcfa501531)
+- game
+![index + game](https://github.com/HongDawww/free/assets/142575028/a336f32a-ca04-4c5e-82fa-e890ae59e73d)
 
 
 
