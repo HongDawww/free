@@ -2,7 +2,8 @@
 > 추억의 싸이월드 만들기
 
 # 활용 기술
-- fontawesome.com
+- fontawesome.com -> 이모티콘 활용
+- figma -> 기본 디자인 활용
 
 # Figma Design
 - index.html
