@@ -29,10 +29,3 @@
 2. javascript 활용하여 navigation button 활성화
 3. game 실행
 
-
-
-# 회원가입 폼 만들기
-> html css js 를 활용한 회원가입 폼 
-
-# Figma Design
-![회원가입](https://github.com/HongDawww/free/assets/142575028/f66fd539-3724-4236-a5e0-88ab2c84ac6a)
