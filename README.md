@@ -20,7 +20,8 @@
 - game
 ![index + game](https://github.com/HongDawww/free/assets/142575028/a336f32a-ca04-4c5e-82fa-e890ae59e73d)
 
-
+- jukebox
+![index + jukebox](https://github.com/HongDawww/free/assets/142575028/9d4aad6b-f09e-4a7c-9b33-c07896f4d012)
 
 # 제작순서 
 1. html + css를 활용하여 기본틀과 피그마 디자인 구현
