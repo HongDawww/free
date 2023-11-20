@@ -4,6 +4,7 @@
     <title>사이좋은 사람들, 싸이월드</title>
     <link href="./style/index.css" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/e4ddde3327.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
 <body>
     <div class="background">
         <div class="outerbox">
@@ -63,10 +64,14 @@
                     </div>
                     <div class="wrapper__right__body">
                         <!-- <iframe src="game.html" frameborder="0"></iframe> -->
-                        <!-- <iframe src="home.html"></iframe> -->
-                        <iframe src="jukebox.html" frameborder="0"></iframe>
-                       
+                        <iframe id="contentFrame" src="home.html"></iframe>
+                        <!-- <iframe src="jukebox.html" frameborder="0"></iframe> -->
                     </div>
+                </div>
+                <div class="navigation">
+                    <div class="navigation__item" id="menuHome">홈</div>
+                    <div class="navigation__item" id="menuJukebox">쥬크박스</div>
+                    <div class="navigation__item" id="menuGame">게임</div>
                 </div>
             </div>
         </div>
