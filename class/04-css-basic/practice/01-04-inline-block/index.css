@@ -1,0 +1,16 @@
+.block-container {
+	border: 3px solid blue;
+}
+.inline-container{
+	border: 3px solid red;
+}
+.block-container div {
+	border: 3px solid green;
+	width: 400px;
+	display: inline;
+}
+.inline-container span {
+	background-color: #fcacac;
+	width: 400px;
+	display: block;
+}
