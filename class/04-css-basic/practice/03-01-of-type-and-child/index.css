@@ -1,0 +1,23 @@
+* {
+	box-sizing: border-box;
+}
+
+/* .container *:first-child{
+	background: red;
+}  적용 안됨 !!*/
+
+.container p:first-of-type{
+	background: blue;
+}
+.container p:last-of-type{
+	background: green;
+}
+
+.container p:nth-of-type(2){
+	background: blueviolet;
+}
+.container span:first-of-type{
+	font-weight: 600;
+	text-decoration: underline;
+	background: yellow;
+}
