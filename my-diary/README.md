@@ -11,4 +11,4 @@
 # Figma Design
 ![나만의 다이어리](https://github.com/HongDawww/self-project/assets/142575028/35f40e29-0ca8-4f4c-bea2-bda3bcbea31d)
 
-
+![menubar](https://github.com/HongDawww/self-project/assets/142575028/c2f8a2aa-df1e-4b96-85e8-18757df7e6d2)
