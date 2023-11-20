@@ -15,3 +15,15 @@ const startWord = () => {
 	}
 }
 
+const generateLottoNumbers = () => {
+    let lottoNumbers = document.getElementById("lottoNumbers");
+
+    let numbers = [];
+    while (numbers.length < 6) {
+        let randomNum = Math.floor(Math.random() * 45) + 1;
+        if (!numbers.includes(randomNum)) {
+            numbers.push(randomNum);
+        }
+    }
+     lottoNumbers.innerHTML = numbers.map(num => `<span>${num}</span>`).join(" ");
+}
