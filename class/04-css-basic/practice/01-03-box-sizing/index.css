@@ -1,0 +1,27 @@
+.container {
+	background-color: antiquewhite;
+}
+.box1 {
+	width: 200px;
+	height: 200px;
+	background-color: white;
+	border: 3px solid red;
+	box-sizing: content-box;
+	padding: 50px;
+}
+.box2 {
+	width: 200px;
+	height: 200px;
+	background-color: white;
+	border: 3px solid blue;
+	box-sizing: border-box;
+	padding: 50px;
+}
+.box3 {
+	width: 200px;
+	height: 200px;
+	background-color: white;
+	border: 3px solid rgb(0, 255, 0);
+	padding: 50px;
+
+}
