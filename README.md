@@ -26,3 +26,5 @@
 
 # 제작순서 
 1. html + css를 활용하여 기본틀과 피그마 디자인 구현
+2. javascript 활용하여 navigation button 활성화
+3. game 실행
