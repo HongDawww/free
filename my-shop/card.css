@@ -12,6 +12,7 @@ html, body {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 .item {
@@ -20,6 +21,7 @@ html, body {
 	position: relative;
 	overflow: hidden;
 	border-radius: 10px;
+	margin-bottom: 15px;
 }
 
 .imgBox {
@@ -56,12 +58,14 @@ html, body {
 	font-size: 22px;
 	font-weight: 500;
 	opacity: 0;
+	transform: translateY(50px);
 
 }
 .textBox__price{
 	font-size: 16px;
 	font-weight: 400;
 	opacity: 0;
+	transform: translateY(50px);
 }
 
 .item:after{
@@ -87,10 +91,12 @@ html, body {
 
 .item:hover .textBox__name {
 	opacity: 1;
+	transform: translateY(0);
 }
 
 .item:hover .textBox__price {
 	opacity: 1;
+	transform: translateY(0);
 }
 
 .item:after,
@@ -98,4 +104,8 @@ html, body {
 .item .textBox__name,
 .item .textBox__price {
 	transition: all 0.4s ease-in-out;
+}
+
+.item .textBox__price {
+	transition: all 0.4s ease-in-out 0.15s;
 }
