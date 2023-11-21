@@ -1,4 +1,4 @@
-# cyworld - 사이좋은 사람들, 싸이월드
+# 01 - cyworld 사이좋은 사람들, 싸이월드
 > 추억의 싸이월드 만들기
 >
 > 
@@ -24,20 +24,15 @@
 - navigation
 ![navigation](https://github.com/HongDawww/free/assets/142575028/58511423-196f-455d-99e9-7e25cdd7a1f2)
 
-# 제작순서 
-1. html + css를 활용하여 기본틀과 피그마 디자인 구현
-2. javascript 활용하여 navigation button 활성화
-3. game 실행
 
 
-
-# 회원가입 폼 만들기
+# 02 - 회원가입 폼 만들기
 > html css js 를 활용한 회원가입 폼 
 
 # Figma Design
 ![회원가입](https://github.com/HongDawww/free/assets/142575028/f66fd539-3724-4236-a5e0-88ab2c84ac6a)
 
-# my-shop : 나만의 쇼핑몰
+# 03 - my-shop : 나만의 쇼핑몰
 > media-quary를 이용한 반응형 쇼핑몰 입니다
 
 # Figma Design
