@@ -36,3 +36,16 @@
 
 # Figma Design
 ![회원가입](https://github.com/HongDawww/free/assets/142575028/f66fd539-3724-4236-a5e0-88ab2c84ac6a)
+
+# my-shop : 나만의 쇼핑몰
+> media-quary를 이용한 반응형 쇼핑몰 입니다
+
+# Figma Design
+- tablet / pc 
+![myshop](https://github.com/HongDawww/self-project/assets/142575028/699819f4-896b-48a7-a267-ef6f2658a698)
+
+- mobile
+
+![myshop-mobile](https://github.com/HongDawww/self-project/assets/142575028/f78d0fcf-c90b-4011-a74f-9dcaba19516c)
+
+
