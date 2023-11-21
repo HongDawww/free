@@ -1,0 +1,13 @@
+*{
+	background: yellow;
+}
+div{
+	background: aqua;
+}
+.text-class{
+	background: blue;
+}
+#text-id{
+	background: red;
+}
+/* 우선순위 : 1. id,  */
