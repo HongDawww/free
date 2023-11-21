@@ -17,11 +17,13 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	animation-name: moveBox;
+	/* animation-name: moveBox;
 	animation-duration: 2s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count:infinite;
 	animation-direction: alternate;
+	 */
+	animation: moveBox 2s ease-in-out infinite alternate;
 	position: absolute;
 }
 
