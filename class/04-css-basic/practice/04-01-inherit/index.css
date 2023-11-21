@@ -1,0 +1,17 @@
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	color: blue;
+	font-size: 38px;
+	border: 4px solid orange;
+}
+/* 상속이 안되는 속성 : border(container에만 적용됨) */
+/* .inner-box, p {
+	border: 4px solid orange;
+}  상속이 되었다면 이렇게 되어야함*/
+/* 상속받는 blue보다 먼저 aqua가 적용된 이유? 우선순위 ! */
+.inner-box {
+	color: aqua;
+}
