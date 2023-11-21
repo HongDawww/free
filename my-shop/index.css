@@ -31,21 +31,23 @@ a {
 	font-size: 42px;
 	font-weight: 700;
 	color: white;
-	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-	animation: titleText 1s ease-in-out;
+	text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	animation: titleText 2s ease-in-out infinite 0.5s;
   }
   
   @keyframes titleText {
 	0% {
-	  transform: translateY(50px);
-	  opacity: 0;
+		transform: translateY(70px);
+		opacity: 0;
 	}
-    
+	50%{
+		transform: translateY(-10px);
+	}
 	100% {
-	  transform: translateY(0);
-	  opacity: 1;
+		transform: translateY(0);
+		opacity: 1;
 	}
-  }
+}
   
   .container {
 	display: flex;
