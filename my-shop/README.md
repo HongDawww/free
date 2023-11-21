@@ -1,5 +1,5 @@
 # my-shop : 나만의 쇼핑몰
-
+> media-quary를 이용한 반응형 웹 페이지 입니다
 # 활용 기술
   <div>
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white">
