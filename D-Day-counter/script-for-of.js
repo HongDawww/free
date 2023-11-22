@@ -40,4 +40,4 @@ const dateFormMaker = function () {
 		document.getElementById(tag).textContent = remainigObj[timeKeys[i]];
 		i++;
 	}
- };
+ }; 
