@@ -49,12 +49,17 @@ const dateFormMaker = function () {
 	const starter = function() {
 		container.style.display = 'flex';
 		messageContainer.style.display = 'none';
+		counterMaker();
 		setInterval(counterMaker,1000);		
 	}
 
+
+
+	//  setInterval(counterMaker,1000);	: 1초마다 실행하는데 1초 뒤에 실행됨
+	//  >> 해결방법 : 함수를 자체적으로 1번 실행함
 	//  setTimeout (counterMaker, 1000) 으로 간결하게 사용 가능
 
-	// for문을 이용한 반복 실행
+	// for문을 이용한 반복 실행 - 반복 지정하기 여려움
 	// for (let i = 0; i < 100; i++) {
 	// 	setTimeout(() => {
 	// 		counterMaker();
