@@ -1,5 +1,6 @@
 const messageContainer = document.querySelector("#d-day-message");
 const container = document.querySelector("#d-day-container");
+
 const intervalIdArr = [];
 
 container.style.display = 'none';
@@ -46,23 +47,24 @@ const dateFormMaker = function () {
 			document.getElementById(tag).textContent = remainigObj[timeKeys[i]];
 			i++;
 		}
-	};
+	}
 
 	const starter = function() {
-		const intervalIdArr = []
 		container.style.display = 'flex';
 		messageContainer.style.display = 'none';
 		counterMaker();
 		const intervalId = setInterval(counterMaker,1000);		
 		intervalIdArr.push(intervalId);
-		console.log(intervalIdArr);
-	}
+	};
 
 	const setClearInterval = function () {
+		container.style.display = 'none';
+		messageContainer.innerHTML = '<h3>D-day를 입력해주세요</h3>'
+		messageContainer.style.display = 'flex';
 		for(let i = 0; i < intervalIdArr.length; i++) {
-			clearInterval(intervalIdArr[1]);
+			clearInterval(intervalIdArr[i])
 		}
-	}
+	};
 	//  setInterval(counterMaker,1000);	: 1초마다 실행하는데 1초 뒤에 실행됨
 	//  >> 해결방법 : 함수를 자체적으로 1번 실행함
 	//  setTimeout (counterMaker, 1000) 으로 간결하게 사용 가능
