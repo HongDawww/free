@@ -63,6 +63,8 @@ const dateFormMaker = function () {
 
 	const starter = function() {
 		const targetDateInput = dateFormMaker();
+		localStorage.setItem('saved-date',targetDateInput);
+		localStorage.getItem('saved-date');
 		container.style.display = 'flex';
 		messageContainer.style.display = 'none';
 		setClearInterval();
