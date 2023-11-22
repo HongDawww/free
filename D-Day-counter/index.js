@@ -49,10 +49,14 @@ const dateFormMaker = function () {
 	const starter = function() {
 		container.style.display = 'flex';
 		messageContainer.style.display = 'none';
-		for (let i = 0; i < 100; i++) {
-			setTimeout(() => {
-				counterMaker();
-			}, 1000 * i);
-		}
-		
+		setInterval(counterMaker,1000);		
 	}
+
+	//  setTimeout (counterMaker, 1000) 으로 간결하게 사용 가능
+
+	// for문을 이용한 반복 실행
+	// for (let i = 0; i < 100; i++) {
+	// 	setTimeout(() => {
+	// 		counterMaker();
+	// 	}, 1000 * i);
+	// }
