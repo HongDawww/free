@@ -15,10 +15,9 @@ const dateFormMaker = function () {
 	return dateFormat;
   };
 
-  const counterMaker = function () {
-		const targetDateInput = dateFormMaker();
+  const counterMaker = function (data) {
 		const nowDate = new Date();
-		const targetDate = new Date(targetDateInput).setHours(0, 0, 0, 0);
+		const targetDate = new Date(data).setHours(0, 0, 0, 0);
 		const remainig = (targetDate - nowDate) / 1000;
 		
 		if(remainig <= 0) {
@@ -45,29 +44,47 @@ const dateFormMaker = function () {
 		const documentArr = ['days','hours','min','sec']
 		const timeKeys = Object.keys(remainigObj);
 		
+		const formet = function (time) {
+			if(time < 10){
+				return '0' +time;
+			} else {
+				return time;
+			}
+		}
+
 		let i = 0;
 		for (let tag of documentArr) {
-			document.getElementById(tag).textContent = remainigObj[timeKeys[i]];
+			const remainigTime = formet(remainigObj[timeKeys[i]]);
+
+			document.getElementById(tag).textContent = remainigTime;
 			i++;
 		}
 	}
 
 	const starter = function() {
+		const targetDateInput = dateFormMaker();
 		container.style.display = 'flex';
 		messageContainer.style.display = 'none';
-		counterMaker();
-		const intervalId = setInterval(counterMaker,1000);		
+		setClearInterval();
+		counterMaker(targetDateInput);
+		const intervalId = setInterval(() => {
+			counterMaker(targetDateInput);
+		},1000);		
 		intervalIdArr.push(intervalId);
 	};
 
 	const setClearInterval = function () {
-		container.style.display = 'none';
-		messageContainer.innerHTML = '<h3>D-day를 입력해주세요</h3>'
-		messageContainer.style.display = 'flex';
 		for(let i = 0; i < intervalIdArr.length; i++) {
 			clearInterval(intervalIdArr[i])
 		}
 	};
+
+	const resetTimer = function () {
+		container.style.display = 'none';
+		messageContainer.innerHTML = '<h3>D-day를 입력해주세요</h3>'
+		messageContainer.style.display = 'flex';
+		setClearInterval();
+	}
 	//  setInterval(counterMaker,1000);	: 1초마다 실행하는데 1초 뒤에 실행됨
 	//  >> 해결방법 : 함수를 자체적으로 1번 실행함
 	//  setTimeout (counterMaker, 1000) 으로 간결하게 사용 가능

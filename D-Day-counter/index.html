@@ -8,19 +8,19 @@
     <h1>D-day</h1>
     <div id="d-day-container">
       <div class="d-day-child-container">
-        <span id="days">0</span>
+        <span id="days"></span>
         <span>일</span>
       </div>
       <div class="d-day-child-container">
-        <span id="hours">0</span>
+        <span id="hours"></span>
         <span>시간</span>
       </div>
       <div class="d-day-child-container">
-        <span id="min">0</span>
+        <span id="min"></span>
         <span>분</span>
       </div>
       <div class="d-day-child-container">
-        <span id="sec">0</span>
+        <span id="sec"></span>
         <span>초</span>
       </div>
     </div>
@@ -33,7 +33,7 @@
       <input type="text" id="target-date-input" class="target-input" size="3" />
     </div>
     <button onclick="starter()" class="btn">카운트다운 시작</button>
-    <button onclick="setClearInterval()" class="btn">초기화</button>
+    <button onclick="resetTimer()" class="btn">초기화</button>
     <script src="./index.js"></script>
   </body>
 </html>
