@@ -31,12 +31,15 @@ const dateFormMaker = function () {
 		remainigSec: Math.floor(remainig) % 60
 	}
 	
-	const documentArr = ['days','hours','min','sec']
-	const timeKeys = Object.keys(remainigObj);
-
-	let i = 0;
-	for (let tag of documentArr) {
-		document.getElementById(tag).textContent = remainigObj[timeKeys[i]];
-		i++;
+	const documentObj = {
+		days: document.getElementById('days'),
+		hours: document.getElementById('hours'),
+		min: document.getElementById("min"),
+		sec: document.getElementById("sec")
 	}
- };
+	documentObj['days'].textContent = remainigObj['remainigDate'];
+	documentObj['hours'].textContent = remainigObj['remainigHours'];
+	documentObj['min'].textContent = remainigObj['remainigMin'];
+	documentObj['sec'].textContent = remainigObj['remainigSec'];
+
+  };

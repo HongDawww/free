@@ -31,13 +31,6 @@ const dateFormMaker = function () {
 		remainigSec: Math.floor(remainig) % 60
 	}
 	
-	// const documentObj = {
-	// 	days: document.getElementById('days'),
-	// 	hours: document.getElementById('hours'),
-	// 	min: document.getElementById("min"),
-	// 	sec: document.getElementById("sec")
-	// }
-
 	const documentArr = ['days','hours','min','sec']
 	const timeKeys = Object.keys(remainigObj);
 
@@ -47,7 +40,4 @@ const dateFormMaker = function () {
 		document.getElementById(tag).textContent = remainigObj[timeKeys[i]];
 		i++;
 	}
-
-
-
-  };
+ };
