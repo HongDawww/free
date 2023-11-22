@@ -1,5 +1,7 @@
 const messageContainer = document.querySelector("#d-day-message");
-messageContainer.textContent = 'D-day를 입력해주세요'
+const conatiner = document.querySelector("#d-day-container");
+// conatiner.style.display = 'none';
+messageContainer.innerHTML = '<h3>D-day를 입력해주세요</h3>'
 
 const dateFormMaker = function () {
 	const inputYear = document.querySelector("#target-year-input").value;
@@ -17,15 +19,27 @@ const dateFormMaker = function () {
 	const remainig = (targetDate - nowDate) / 1000;
 	
 	if(remainig <= 0) {
-		console.log('타이머 종료');
+		messageContainer.innerHTML = '<h3>측정 불가 !! <br> 과거 입니다</h3>'
 	} else if (isNaN(remainig)){
-		console.log('xxx');
+		messageContainer.innerHTML = '<h3>유효한 시간대가 아닙니다!!</h3>'
 	}
 
-	const remainigDate = Math.floor(remainig / 3600 / 24);
-	const remainigHours = Math.floor(remainig / 3600) % 24;
-	const remainigMin = Math.floor(remainig / 60) % 60;
-	const remainigSec = Math.floor(remainig) % 60;
+	const remainigObj = {
+		remainigDate: Math.floor(remainig / 3600 / 24),
+		remainigHours: Math.floor(remainig / 3600) % 24,
+		remainigMin: Math.floor(remainig / 60) % 60,
+		remainigSec: Math.floor(remainig) % 60
+	}
+	
+	const documentObj = {
+		days: document.getElementById('days'),
+		hours: document.getElementById('hours'),
+		min: document.getElementById("min"),
+		sec: document.getElementById("sec")
+	}
+	documentObj['days'].textContent = remainigObj['remainigDate'];
+	documentObj['hours'].textContent = remainigObj['remainigHours'];
+	documentObj['min'].textContent = remainigObj['remainigMin'];
+	documentObj['sec'].textContent = remainigObj['remainigSec'];
 
-	console.log(remainigDate, remainigHours, remainigMin, remainigSec);
   };
