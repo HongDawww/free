@@ -25,10 +25,13 @@ const dateFormMaker = function () {
 			container.style.display = 'none';
 			messageContainer.innerHTML = '<h3>측정 불가 !! <br> 과거 입니다</h3>'
 			messageContainer.style.display = 'flex';
+			setClearInterval();
+			return;
 		} else if (isNaN(remainig)){
 			container.style.display = 'none';
 			messageContainer.innerHTML = '<h3>유효한 시간대가 아닙니다!!</h3>'
 			messageContainer.style.display = 'flex';
+			setClearInterval();
 			return;
 		}
 
