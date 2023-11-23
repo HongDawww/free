@@ -1,13 +1,14 @@
 const todoInput = document.querySelector("#todo-input");
+const todoList = document.querySelector('#todo-list');
 
 const createTodo = function () {
-	const todoList = document.querySelector('#todo-list');
 	const newLi = document.createElement('li');
 	const newSpan = document.createElement('span');
 	const newBtn = document.createElement('button');
 	
 	newBtn.addEventListener('click',()=> {
 		newLi.classList.toggle('complete');
+		saveItemsFn();
 	});
 
 	newLi.addEventListener('dblclick', () => {
@@ -19,6 +20,7 @@ const createTodo = function () {
 	newLi.appendChild(newSpan);
 	todoList.appendChild(newLi);
 	todoInput.value = '';
+	saveItemsFn();
 }
 
 const keyCodeCheck = function () {
@@ -32,4 +34,17 @@ const deleteAll = function () {
 	for(let i = 0; i < liList.length; i++) {
 		liList[i].remove();
 	}
+}
+
+const saveItemsFn = function () {
+	const saveItems = [];
+	for(let i = 0; i < todoList.children.length; i++) {
+		const todoobj = {
+			constents: todoList.children[i].querySelector('span').textContent,
+			complete: todoList.children[i].classList.contains('complete')
+		};
+		saveItems.push(todoobj);
+	}
+	
+	localStorage.setItem('save-items',JSON.stringify(saveItems));
 }
