@@ -1,6 +1,6 @@
 const messageContainer = document.querySelector("#d-day-message");
 const container = document.querySelector("#d-day-container");
-
+const savedDate = localStorage.getItem('saved-date');
 const intervalIdArr = [];
 
 container.style.display = 'none';
@@ -61,10 +61,11 @@ const dateFormMaker = function () {
 		}
 	}
 
-	const starter = function() {
-		const targetDateInput = dateFormMaker();
+	const starter = function(targetDateInput) {
+		if (!targetDateInput) {
+			targetDateInput = dateFormMaker();
+		}
 		localStorage.setItem('saved-date',targetDateInput);
-		localStorage.getItem('saved-date');
 		container.style.display = 'flex';
 		messageContainer.style.display = 'none';
 		setClearInterval();
@@ -86,6 +87,13 @@ const dateFormMaker = function () {
 		messageContainer.innerHTML = '<h3>D-day를 입력해주세요</h3>'
 		messageContainer.style.display = 'flex';
 		setClearInterval();
+	}
+
+	if(savedDate) {
+		starter(savedDate);
+	} else {
+		container.style.display = 'flex';
+		messageContainer.style.display = 'none';
 	}
 	//  setInterval(counterMaker,1000);	: 1초마다 실행하는데 1초 뒤에 실행됨
 	//  >> 해결방법 : 함수를 자체적으로 1번 실행함
