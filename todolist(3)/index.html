@@ -5,15 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>To Do</title>
 	<link rel="stylesheet" href="./style.css">
+	<script src="./script.js" defer></script>
 </head>
 <body>
 	<h1>To Do</h1>
 	<div class="todo-container">
-		<input type="text" id="todo-input">
+		<input type="text" id="todo-input" onkeydown="keyCodeCheck()">
 	</div>
-	<ul>
-		<li></li>
+	<ul id="todo-list">
+		<!-- <li><span>인사하기</span></li>
+		<li>손 흔들기</li> -->
 	</ul>
-	<script src="./script.js"></script>
 </body>
 </html>
