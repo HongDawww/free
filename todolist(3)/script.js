@@ -79,3 +79,49 @@ if(savedTodoList) {
 		createTodo(savedTodoList[i]);
 	}
 }
+
+const weatherSearch = function (position) {
+const openWeatherRes = 
+fetch(
+	`https://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&appid=bea1fafc881ff0b75f67ce5bf4bdb9b1`
+	)
+	.then((res) =>{
+		return res.json();
+	})
+	.then((json) => {
+		console.log(json.name,json.weather[0].description);
+	})
+	.catch((err) => {
+		console.error(err)
+	})	
+}	
+
+const accessToGeo = function (position) {
+	const positionObj = {
+		latitude: position.coords.latitude,
+		longitude: position.coords.longitude,
+	};
+
+	weatherSearch(positionObj);
+};
+
+const askForLocation = function () {
+	navigator.geolocation.getCurrentPosition(accessToGeo, (err) => {
+		console.log(err);
+	});
+};
+
+askForLocation();
+
+// const promiseTest = function () {
+// 	return new Promise((resolver,reject) => {
+// 		setTimeout(()=> {
+// 			resolver(100); // pending상태로 2초 유지
+// 			// reject('error');
+// 		}, 2000);
+// 	});
+// }
+
+// promiseTest().then((res)=>{
+// 	console.log(res);
+// });
