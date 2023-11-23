@@ -1,8 +1,7 @@
 # 05 - To Do List (3)
 >
 >
-> 
-> fontawesome.com ->
+
 >  이모티콘 활용
 # 활용 기술
   <div>
