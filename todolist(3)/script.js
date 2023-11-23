@@ -60,13 +60,19 @@ const saveItemsFn = function () {
 		saveItems.push(todoObj);
 	}
 
-	if(saveItems.length === 0){
-		localStorage.removeItem('saved-items');
-	} else {
-		localStorage.setItem('saved-items',JSON.stringify(saveItems));
-	}
+	// 삼항 연산자로 변경
 
-}
+	saveItems.length === 0 
+	? localStorage.removeItem('saved-items') 
+	: localStorage.setItem('saved-items',JSON.stringify(saveItems));
+
+	// if(saveItems.length === 0){
+	// 	localStorage.removeItem('saved-items');
+	// } else {
+	// 	localStorage.setItem('saved-items',JSON.stringify(saveItems));
+	// }
+
+};
 
 if(savedTodoList) {
 	for(let i = 0; i < savedTodoList.length; i++) {
