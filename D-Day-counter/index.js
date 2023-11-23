@@ -6,7 +6,7 @@ const intervalIdArr = [];
 container.style.display = 'none';
 messageContainer.innerHTML = '<h3>D-day를 입력해주세요</h3>'
 
-const dateFormMaker = function () {
+	const dateFormMaker = function () {
 	const inputYear = document.querySelector("#target-year-input").value;
 	const inputMonth = document.querySelector("#target-month-input").value;
 	const inputDate = document.querySelector("#target-date-input").value;
@@ -16,6 +16,9 @@ const dateFormMaker = function () {
   };
 
   const counterMaker = function (data) {
+		if (data !== savedDate) {
+			localStorage.setItem('saved-date',data);
+		}
 		const nowDate = new Date();
 		const targetDate = new Date(data).setHours(0, 0, 0, 0);
 		const remainig = (targetDate - nowDate) / 1000;
@@ -65,7 +68,6 @@ const dateFormMaker = function () {
 		if (!targetDateInput) {
 			targetDateInput = dateFormMaker();
 		}
-		localStorage.setItem('saved-date',targetDateInput);
 		container.style.display = 'flex';
 		messageContainer.style.display = 'none';
 		setClearInterval();
@@ -77,6 +79,7 @@ const dateFormMaker = function () {
 	};
 
 	const setClearInterval = function () {
+		localStorage.removeItem('saved-date');
 		for(let i = 0; i < intervalIdArr.length; i++) {
 			clearInterval(intervalIdArr[i])
 		}
@@ -92,8 +95,8 @@ const dateFormMaker = function () {
 	if(savedDate) {
 		starter(savedDate);
 	} else {
-		container.style.display = 'flex';
-		messageContainer.style.display = 'none';
+		container.style.display = 'none';
+		messageContainer.innerHTML = '<h3>D-day를 입력해주세요</h3>'
 	}
 	//  setInterval(counterMaker,1000);	: 1초마다 실행하는데 1초 뒤에 실행됨
 	//  >> 해결방법 : 함수를 자체적으로 1번 실행함
