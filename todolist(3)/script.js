@@ -81,7 +81,6 @@ if(savedTodoList) {
 }
 
 const weatherSearch = function (position) {
-const openWeatherRes = 
 fetch(
 	`https://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&appid=bea1fafc881ff0b75f67ce5bf4bdb9b1`
 	)
@@ -89,17 +88,19 @@ fetch(
 		return res.json();
 	})
 	.then((json) => {
-		console.log(json.name,json.weather[0].description);
+		console.log(json.name,json.weather[0].main);
 	})
 	.catch((err) => {
 		console.error(err)
 	})	
 }	
 
-const accessToGeo = function (position) {
+const accessToGeo = function ({ coords }) {
+	const { latitude, longitude } = coords
+	// shorthand property
 	const positionObj = {
-		latitude: position.coords.latitude,
-		longitude: position.coords.longitude,
+		latitude,
+		longitude,
 	};
 
 	weatherSearch(positionObj);
