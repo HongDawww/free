@@ -81,6 +81,15 @@ if(savedTodoList) {
 }
 
 const weatherDataActive = function ({ location, weather }) {
+	const weatherMainList = [
+		'Clear',
+		'Cloud',
+		'Drizzle',
+		'Rain',
+		'Snow',
+		'Thunderstorm',
+	];
+	weather = weatherMainList.includes(weather) ? weather : 'Fog';
 	const locationNameTtag = document.querySelector('#location-name-tag');
 	locationNameTtag.textContent = location;
 	// console.log(weather);
