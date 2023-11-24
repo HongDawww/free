@@ -80,6 +80,12 @@ if(savedTodoList) {
 	}
 }
 
+const weatherDataActive = function ({ location, weather }) {
+	const locationNameTtag = document.querySelector('#location-name-tag');
+	locationNameTtag.textContent = location;
+}
+
+
 const weatherSearch = function ({ latitude, longitude }) {
 fetch(
 	`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=bea1fafc881ff0b75f67ce5bf4bdb9b1`
@@ -88,7 +94,11 @@ fetch(
 		return res.json();
 	})
 	.then((json) => {
-		console.log(json.name,json.weather[0].main);
+		const weatherData = {
+			location: json.name,
+			weather: json.weather[0].main
+		}
+		weatherDataActive(weatherData);
 	})
 	.catch((err) => {
 		console.error(err)
