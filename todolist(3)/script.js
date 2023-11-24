@@ -1,6 +1,7 @@
 const todoInput = document.querySelector("#todo-input");
 const todoList = document.querySelector('#todo-list');
 
+const savedWeatherData = JSON.parse(localStorage.getItem('saved-weather'));
 const savedTodoList = JSON.parse(localStorage.getItem('saved-items'));
 
 const createTodo = function (storageData) {
@@ -83,7 +84,7 @@ if(savedTodoList) {
 const weatherDataActive = function ({ location, weather }) {
 	const weatherMainList = [
 		'Clear',
-		'Cloud',
+		'Clouds',
 		'Drizzle',
 		'Rain',
 		'Snow',
@@ -91,10 +92,21 @@ const weatherDataActive = function ({ location, weather }) {
 	];
 	weather = weatherMainList.includes(weather) ? weather : 'Fog';
 	const locationNameTtag = document.querySelector('#location-name-tag');
+
 	locationNameTtag.textContent = location;
-	// console.log(weather);
 	document.body.style.backgroundImage = `url('./images/${weather}.jpg')`
-}
+
+	if(
+		!savedWeatherData || 
+		savedWeatherData.location !== location || 
+		savedWeatherData.weather !== weather
+		) {
+			localStorage.setItem(
+			'saved-whether',
+			JSON.stringify({ location, weather })
+		);
+	}
+};
 
 
 const weatherSearch = function ({ latitude, longitude }) {
