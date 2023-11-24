@@ -83,6 +83,8 @@ if(savedTodoList) {
 const weatherDataActive = function ({ location, weather }) {
 	const locationNameTtag = document.querySelector('#location-name-tag');
 	locationNameTtag.textContent = location;
+	// console.log(weather);
+	document.body.style.backgroundImage = `url('./images/${weather}.jpg')`
 }
 
 
