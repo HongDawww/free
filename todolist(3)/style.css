@@ -3,7 +3,7 @@
 }
 
 body {
-	background-image: url("./images/Clear.jpg");
+	/* background-image: url(""); */
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
