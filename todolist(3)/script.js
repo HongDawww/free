@@ -80,9 +80,9 @@ if(savedTodoList) {
 	}
 }
 
-const weatherSearch = function (position) {
+const weatherSearch = function ({ latitude, longitude }) {
 fetch(
-	`https://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&appid=bea1fafc881ff0b75f67ce5bf4bdb9b1`
+	`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=bea1fafc881ff0b75f67ce5bf4bdb9b1`
 	)
 	.then((res) =>{
 		return res.json();
